@@ -1,0 +1,149 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("https://i.pinimg.com/736x/6d/71/ca/6d71ca79cbefc13cf12298c8bca3859c.jpg");
+    background-size: cover;  /* Faz a imagem cobrir toda a tela */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Impede a repetição da imagem */
+    background-attachment: fixed;
+    transition: 0.5s;
+}
+
+body.dark-mode {
+    background-image: url("https://i.pinimg.com/736x/bf/23/d2/bf23d2e517448f2713398e3b5b984cfe.jpg");
+    background-size: cover;  /* Faz a imagem cobrir toda a tela */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Impede a repetição da imagem */
+    background-attachment: fixed;
+}
+.background-image {
+  filter: blur(5px);
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(70, 30, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 25%;
+    margin: auto;
+    margin-top: 10%;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+    .login-box {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .login-box {
+        width: 40%;
+    }
+}
+
+.login-box h1 {
+    text-align: center;
+    transition: 0.5s;
+}
+
+.login-box h1.dark-mode {
+    color: white;
+}
+
+.theme {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    margin-top: 30px;
+}
+
+.input-field {
+    width: 80%; /* Aumenta a largura dos inputs para ocupar mais espaço */
+    margin-bottom: 20px;
+    border: none;
+    background-color: beige;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.input-field.dark-mode {
+    background-color: indigo;
+    color: white;
+}
+
+.input-field:focus { /* Seletor correto para o foco */
+    outline: none;
+}
+form button {
+  width: 40%;
+  border: none;
+  background-color: pink;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: 0.5s;
+}
+form button.dark-mode {
+  background-color: blueviolet;
+}
+form button:hover {
+  cursor: pointer;
+  background-color: pink;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 48%;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.5s;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.switch input:checked + .slider {
+  background-color: dimgray;
+}
+.switch input:checked + .slider:before {
+transform: translateX(26px);
+}
